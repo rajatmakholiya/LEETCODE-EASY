@@ -13,7 +13,7 @@ public:
             if (i % 2 == 0 && s.count(i / 2)) {
                 return true;
             }
-            s.insert(i);s
+            s.insert(i);
         }
         return false;
     }

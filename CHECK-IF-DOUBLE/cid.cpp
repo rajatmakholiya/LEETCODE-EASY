@@ -1,16 +1,20 @@
-class Solution {
-    public boolean checkIfExist(int[] arr) {
-        Set <Integer> s = new HashSet<>();
+#include <unordered_set>
+#include <vector>
 
-        for (int i : arr){
-            if(s.contains(i*2)){
+class Solution {
+public:
+    bool checkIfExist(std::vector<int>& arr) {
+        std::unordered_set<int> s;
+
+        for (int i : arr) {
+            if (s.count(i * 2)) {
                 return true;
             }
-            if(s.contains(i/2) && i%2 == 0){
+            if (i % 2 == 0 && s.count(i / 2)) {
                 return true;
             }
-            s.add(i);
+            s.insert(i);s
         }
         return false;
     }
-}
+};

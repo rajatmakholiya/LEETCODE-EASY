@@ -2,7 +2,7 @@ class Solution:
     def search(self, nums: List[int], target: int) -> int:
         start = 0
         end = len(nums) - 1
-        mid = len(nums) / 2
+        mid = len(nums) // 2
         while start <= end:
             if nums[mid] < target:
                 start = mid + 1
